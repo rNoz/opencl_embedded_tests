@@ -51,6 +51,7 @@ It accepts the following env vars:
 - FACTOR: (float) factor to multiply each element
 - PLATFORM: (int) OpenCL platform 
 - DEVICE: (int) OpenCL device 
+- FILL: (str) INDEX|RAND to fill the initial vector with the indices or random data
 
 ```
 cd saxpy
@@ -58,4 +59,5 @@ FACTOR=3.1415 VECTOR=12 CHECK=1 sudo -E ./build/saxpy saxpy.cl
 PLATFORM=1 FACTOR=2.0 VECTOR=24 CHECK=1 sudo -E ./build/saxpy saxpy.cl
 PLATFORM=1 VECTOR=24 CHECK=1 sudo -E ./build/saxpy dsum.cl
 VECTOR=24 CHECK=1 sudo -E ./build/saxpy dmul.cl
+FILL=INDEX VECTOR=24 CHECK=1 sudo -E ./build/saxpy dmul.cl
 ```
